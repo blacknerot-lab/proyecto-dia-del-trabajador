@@ -1,0 +1,156 @@
+body {
+    background-image: url('../imagenes/neon.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.galeria-card img {
+    height: 350px;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.info-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+}
+.galeria-card:hover .info-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+.galeria-card:hover img {
+    transform: scale(1.1);
+}
+.galeria-card {
+    border: 1px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.galeria-card:hover {
+    border: 1px solid #0d6efd
+}
+
+
+
+.galeria-miniatura {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.galeria-miniatura:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+
+
+
+
+
+
+.diferente-container {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+}
+
+
+.diagonal-shape {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    width: 60%;
+    height: 100%;
+    background-color: #0c1a26;
+    transform: skewX(-15deg);
+    z-index: 1;
+}
+
+.z-3 {
+    z-index: 3;
+}
+
+.diferente-descripcion {
+    color: #f1f3f5;
+    font-weight: 300;
+}
+
+.diferente-btn:hover {
+    background-color: #f8f9fa !important;
+    color: #0c1a26 !important;
+}
+
+@media (max-width: 767.98px) {
+    .diferente-container {
+        height: auto;
+        min-height: 400px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                          url('../imagenes/7.jpg') !important;
+    }
+    .diferente-text-col {
+        padding: 40px !important;
+        text-align: center;
+    }
+    .col-md-7 {
+        width: 100% !important;
+    }
+}
+
+
+
+.hover-zoom {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-zoom:hover {
+    transform: scale(1.08);
+}
+
+.lh-lg {
+    line-height: 1.8 !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+
+
+/* Estilo para los campos del formulario al hacer clic */
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white;
+    border-color: #ffc107;
+    box-shadow: 0 0 10px rgba(255, 193, 7, 0.2);
+}
+
+/* Color de los iconos de redes sociales al pasar el mouse */
+.btn-outline-light:hover {
+    background-color: #ffc107;
+    border-color: #ffc107;
+    color: #000;
+}
+
+/* Ajuste de iconos (Asegúrate de tener Bootstrap Icons cargado) */
+.bi {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
